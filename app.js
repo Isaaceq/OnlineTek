@@ -1,29 +1,52 @@
-var app = angular.module("thrivOnline", ["ui.router"]);
-
+var app = angular.module("thrivOnline", ['ui.router'])
 
 app.config(function($stateProvider, $urlRouterProvider) {
 
   $urlRouterProvider.otherwise("/");
 
   $stateProvider
-    .state("home", {
+    .state('app', {
+    abstract: true,
+    url: '',
+    templateUrl: './views/app-container.html',
+    controller: 'appController'
+    })
+    .state("app.home", {
       url: "/",
       templateUrl: "./views/home.html",
-      controller: "homeController"
+      controller: "homeController",
+      metaTags: {
+      title: "",
+      description: ""
+    }
     })
-    .state("features", {
+    .state("app.features", {
       url: "/features",
       templateUrl: "./views/features.html",
-      controller: "featuresController"
+      controller: "featuresController",
+      metaTags: {
+      title: "",
+      description: ""
+    }
+
     })
-    .state("pricing", {
+    .state("app.pricing", {
       url: "/pricing",
       templateUrl: "./views/pricing.html",
-      controller: "pricingController"
+      controller: "pricingController",
+      metaTags: {
+      title: "",
+      description: ""
+    }
+
     })
-    .state("hiw", {
+    .state("app.hiw", {
       url: "/howitworks",
       templateUrl: "./views/hiw.html",
-      controller: "hiwController"
+      controller: "hiwController",
+      metaTags: {
+      title: "",
+      description: ""
+    }
     })
 });
