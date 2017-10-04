@@ -1,0 +1,73 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ThrivOnline</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap-theme.min.css">
+    <style>
+        html {
+            background: url(heroImage.png) no-repeat center center fixed;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+        }
+
+        body {
+            background-color: rgba(0, 0, 0, 0);
+        }
+
+        .text {
+            margin-top: 15%;
+            color: white;
+        }
+
+        .logoImage {
+            height: 150px;
+        }
+
+        h3 {
+            font-size: 25px;
+            font-weight: 100;
+            margin-top: 5%;
+            word-spacing: 5px;
+            letter-spacing: 5px;
+        }
+
+        #video-background {
+            /*  making the video fullscreen  */
+            position: fixed;
+            right: 0;
+            bottom: 0;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            z-index: -100;
+            opacity: .5;
+        }
+    </style>
+</head>
+
+<body>
+    <video autoplay="" loop="" id="video-background" muted="" plays-inline="">
+        <source src="laVideo.mp4"
+            type="video/mp4">
+    </video>
+
+    <div class="text text-center">
+        <img class="logoImage" src="thoLogoWhite_X3.png" alt="">
+        <h3>THE LAST WEBSITE YOU'LL EVER NEED</h3>
+    </div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+
+</body>
+
+</html>
