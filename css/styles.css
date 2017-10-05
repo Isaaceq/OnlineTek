@@ -1,4 +1,4 @@
-/** {
+* {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
@@ -8,7 +8,7 @@ body {
   font-size: 16px;
   font-weight: 400;
   font-family: 'Open Sans', sans-serif;
-}*/
+}
 
 /* The navigation bar */
 #menu {
@@ -21,18 +21,116 @@ body {
   position: fixed;
 }
 
-/*#video-background {
-      making the video fullscreen
-    position: fixed;
-    right: 0;
-    bottom: 0;
-    min-width: 100%;
-    min-height: 100%;
-    width: auto;
-    height: auto;
-    z-index: -100;
-    opacity: .5;
-}*/
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+ 
+}
+
+*:before,
+*:after {
+  -webkit-box-sizing: inherit;
+  -moz-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+#video-viewport {
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  z-index: -1;
+  background-image: url(/images/bg_home.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50% ;
+
+}
+
+video {
+ position: absolute;
+ top: 50%;
+ left: 50%;
+ transform: translate(-50%, -50%);
+ min-width: 101%;
+ min-height: 101%;
+ width: auto !important;
+ height: auto !important;
+ opacity: .5;
+  
+}
+
+.fullsize-video-bg {
+  height: 100%;
+  overflow: hidden;
+
+  
+}
+
+.fullsize-video-bg:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.fullsize-video-bg:after {
+  content: "";
+  background-size: 3px 3px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.fullsize-video-bg .inner {
+  display: table;
+  width: 100%;
+  max-width: 24em;
+  height: 100%;
+  margin: 0 auto;
+  padding: 0;
+  position: relative;
+  z-index: 2;
+  text-shadow: 0 1px 5px rgba(0, 0, 0, .5);
+}
+
+.fullsize-video-bg .inner>div {
+  text-align: center;
+  display: table-cell;
+  vertical-align: middle;
+  padding: 0 2em;
+}
+
+h1 {
+  font-family: "Raleway", sans-serif;
+  font-size: 3em;
+  line-height: .9;
+  font-weight: 900;
+  letter-spacing: -.025em;
+  text-transform: uppercase;
+  margin-bottom: .5em;
+}
+
+h1+p {
+  font-family: "Shadows Into Light Two", cursive;
+  font-size: 1.5em;
+}
+/* 
+#1C9AE6
+#EF9215
+#67B730 */
+
+#fullpage {
+  transition: all 700ms ease;
+}
 
 #homeHero1 {
   background:url(../../assets/img/bg_home.png) no-repeat center center fixed;
